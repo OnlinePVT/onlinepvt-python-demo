@@ -80,18 +80,18 @@ def print_composition(result: ApiOutputCalculationResultPoint):
 def print_properties(result: ApiOutputCalculationResultPoint):
     firstPhase = result.phases[0]
     print("")
-    print_value(f"Phase Fraction [{firstPhase.mole_percent.units}]")
+    print_value(f"Phase Fraction [Mole]")
     for phase in result.phases:
         print_value(str(phase.mole_percent.value))
     print("")
-    print_value(f"Phase Fraction [{firstPhase.weight_percent.units}]")
+    print_value(f"Phase Fraction [Weight]")
     for phase in result.phases:
         print_value(str(phase.weight_percent.value))
     print("")
-    # print_value(f"Compressibility [-]")
-    # for phase in result.phases:
-    #     print_value(str(phase.compressibility.value))
-    # print("")
+    print_value(f"Compressibility [-]")
+    for phase in result.phases:
+        print_value(str(phase.compressibility.value))
+    print("")
     print_value(f"Density [{firstPhase.density.units}]")
     for phase in result.phases:
         print_value(str(phase.density.value))
@@ -116,9 +116,9 @@ def print_properties(result: ApiOutputCalculationResultPoint):
     for phase in result.phases:
         print_value(str(phase.cv.value))
     print("")
-    print_value(f"JTCoeffient [{firstPhase.jp_coeffient.units}]")
+    print_value(f"JTCoeffient [{firstPhase.jt_coeffient.units}]")
     for phase in result.phases:
-        print_value(str(phase.jp_coeffient.value))
+        print_value(str(phase.jt_coeffient.value))
     print("")
     print_value(f"Velocity of sound [{firstPhase.speed_of_sound.units}]")
     for phase in result.phases:

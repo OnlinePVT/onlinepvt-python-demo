@@ -29,3 +29,11 @@ ONLINEPVT_ACCESS_SECRET=
 You can get these values by contacting us at [OnlinePVT](https://onlinepvt.com/contact)
 
 !!! Please do not share or expose these values !!!
+
+## Run any sample
+
+Now just run any sample like any Python script
+
+```
+py flash_sample.py
+```
