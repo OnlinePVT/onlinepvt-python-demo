@@ -167,6 +167,7 @@ def print_polymer_distributions(result: ApiOutputCalculationResultPoint):
 
         # now print the actual distribution values for each phase
         for distIndex in range(len(component.distribution)):
+            print("")
             print_value("")
             for phaseIndex in range(len(result.phases)):
                 distribution = result.phases[phaseIndex].composition.composition.components[compIndex].distribution[distIndex]
